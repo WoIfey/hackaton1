@@ -103,7 +103,7 @@ const Home = () => {
 
         <div className="min-h-screen w-full gap-4 items-center justify-center flex flex-wrap max-sm:flex-col">
           <Card
-            src="/1.jpg"
+            src="/hackaton1/1.jpg"
             name="Nightshade"
             description="                NightShade is a fierce warrior, known for her agility and
                 stealth. She is a skilled fighter who prefers to strike from the
@@ -114,7 +114,7 @@ const Home = () => {
                 revealing her true motives."
           />
           <Card
-            src="/2.jpg"
+            src="/hackaton1/2.jpg"
             name="Warcry"
             description="                Warcry is a fearsome knight who has risen from the dead to
                 continue his quest for vengeance. He is a relentless fighter,
@@ -126,7 +126,7 @@ const Home = () => {
                 striking fear into the hearts of his enemies."
           />
           <Card
-            src="/3.jpg"
+            src="/hackaton1/3.jpg"
             name="Grimshadow"
             description="                GrimShadow is a powerful and solitary dark witch, feared for her
                 formidable magic. She lives deep in the forest and rarely uses
@@ -136,7 +136,7 @@ const Home = () => {
                 mystery, and her true intentions are known only to herself."
           />
           <Card
-            src="/4.jpg"
+            src="/hackaton1/4.jpg"
             name="Shadowstrike"
             description="                Shadowstrike is a deadly assassin with a reputation for being
                 both swift and stylish. He is known for his impeccable manners
@@ -149,7 +149,7 @@ const Home = () => {
                 never accepting a contract that would harm innocent people"
           />
           <Card
-            src="/5.jpg"
+            src="/hackaton1/5.jpg"
             name="Deathwhisper"
             description="                Deathwhisper is a mysterious and formidable soldier, with a
                 reputation that spans across time and space. Little is known
@@ -161,7 +161,7 @@ const Home = () => {
                 to the end"
           />
           <Card
-            src="/6.jpg"
+            src="/hackaton1/6.jpg"
             name="Bloodrage"
             description="                Bloodrage is a deadly fighter with a deceivingly cute exterior.
                 She may appear innocent and sweet, but her petite frame belies
@@ -175,7 +175,7 @@ const Home = () => {
                 adorable charm and deadly ferocity."
           />
           <Card
-            src="/7.jpg"
+            src="/hackaton1/7.jpg"
             name="Shadowclaw"
             description="                Shadowclaw is a formidable creature, a hybrid of man and tiger
                 with razor-sharp claws and unmatched agility. He is a solitary
@@ -189,7 +189,7 @@ const Home = () => {
                 unmatched skillset."
           />
           <Card
-            src="/8.jpg"
+            src="/hackaton1/8.jpg"
             name="Darkfire"
             description="                Darkfire is a blood magician of immense power and darkness. She
                 wields a formidable command over the forces of blood and
