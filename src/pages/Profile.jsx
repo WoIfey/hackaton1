@@ -11,6 +11,7 @@ const Profile = () => {
           src={favCard ? favCard.src : ""}
           name={favCard ? favCard.name : ""}
           description={favCard ? favCard.description : ""}
+          color={favCard ? favCard.color : ""}
         />
       </div>
     </main>

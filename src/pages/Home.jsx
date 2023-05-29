@@ -112,6 +112,7 @@ const Home = () => {
                 mention of her name. Despite her formidable skills, NightShade
                 is a solitary figure, keeping her own counsel and never
                 revealing her true motives."
+            color="bg-slate-600"
           />
           <Card
             src="/hackaton1/2.jpg"
@@ -124,6 +125,7 @@ const Home = () => {
                 making him a formidable opponent in battle. He is often seen
                 leading his undead army into battle, his distinctive battle cry
                 striking fear into the hearts of his enemies."
+            color="bg-slate-800"
           />
           <Card
             src="/hackaton1/3.jpg"
@@ -134,6 +136,7 @@ const Home = () => {
                 cautious, for she is known to be unpredictable and dangerous to
                 cross. GrimShadow is a shadowy figure, cloaked in darkness and
                 mystery, and her true intentions are known only to herself."
+            color="bg-slate-600"
           />
           <Card
             src="/hackaton1/4.jpg"
@@ -147,6 +150,7 @@ const Home = () => {
                 sharp intellect to outmaneuver his targets. Despite his
                 profession, Shadowstrike operates with a strict moral code,
                 never accepting a contract that would harm innocent people"
+            color="bg-slate-800"
           />
           <Card
             src="/hackaton1/5.jpg"
@@ -159,6 +163,7 @@ const Home = () => {
                 time, Deathwhisper remains a fierce warrior, with unparalleled
                 skill and an unwavering determination to see his mission through
                 to the end"
+            color="bg-slate-600"
           />
           <Card
             src="/hackaton1/6.jpg"
@@ -173,6 +178,7 @@ const Home = () => {
                 soft spot for animals and often goes out of her way to help
                 them. She is a complex and intriguing figure, with a mix of
                 adorable charm and deadly ferocity."
+            color="bg-slate-500"
           />
           <Card
             src="/hackaton1/7.jpg"
@@ -187,6 +193,7 @@ const Home = () => {
                 natural world and strives to live in harmony with it. He is a
                 creature of mystery and power, with an unwavering spirit and an
                 unmatched skillset."
+            color="bg-slate-900"
           />
           <Card
             src="/hackaton1/8.jpg"
@@ -201,6 +208,7 @@ const Home = () => {
                 loyalty to those she considers her own. She will stop at nothing
                 to protect them, using her formidable powers to strike down any
                 who would seek to harm them."
+            color="bg-slate-700"
           />
         </div>
       </main>

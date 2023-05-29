@@ -219,3 +219,12 @@
   -webkit-animation-name: fadeInDownBigg;
   animation-name: fadeInDownBigg;
 }
+
+.card {
+  transition: transform 1.5s;
+  transform-style: preserve-3d;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
