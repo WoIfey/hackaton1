@@ -51,18 +51,18 @@ const Home = () => {
   return (
     <>
       <main className="min-h-screen">
-        <div className="flex justify-center items-center min-h-screen">
+        <div className="flex min-h-screen items-center justify-center">
           <h1
             style={{ animationDuration: "1s" }}
-            className={`text-[5rem] max-sm:text-2xl text-amber-200 font-extrabold animate__animated ${
+            className={`animate__animated text-[5rem] font-extrabold text-amber-200 max-sm:text-2xl ${
               fadeIn ? "animate__fadeInLeftBigg" : "animate__fadeOutLeftBigg"
             }`}
           >
             Funny Website
           </h1>
-          <div className="writing-mode-vertical-lr text-right absolute left-[40%]">
-            <div className="text-[8rem] max-sm:text-5xl text-slate-200 inline-block wicked">
-              <p className="transform -rotate-90 hover:skew-x-12 inline-block">
+          <div className="writing-mode-vertical-lr absolute left-[40%] text-right">
+            <div className="wicked inline-block text-[8rem] text-slate-200 max-sm:text-5xl">
+              <p className="inline-block -rotate-90 transform hover:skew-x-12">
                 Wicked
               </p>
             </div>
@@ -70,18 +70,18 @@ const Home = () => {
           <div className="absolute left-[30%]">
             <div
               style={{ animationDuration: "2s" }}
-              className={`text-[6rem] max-sm:text-2xl text-lime-200 inline-block animate__animated ${
+              className={`animate__animated inline-block text-[6rem] text-lime-200 max-sm:text-2xl ${
                 slideIn ? "animate__slideOutUpp" : "animate__slideInDownn"
               }`}
             >
-              <p className="transform rotate-180 inline-block hover:translate-x-6">
+              <p className="inline-block rotate-180 transform hover:translate-x-6">
                 Twisted
               </p>
             </div>
           </div>
           <p
             style={{ animationDuration: "0.7s" }}
-            className={`hover:opacity-40 text-[5rem] max-sm:text-2xl transform scale-x-(-1) text-green-200 animate__animated ${
+            className={`scale-x-(-1) animate__animated transform text-[5rem] text-green-200 hover:opacity-40 max-sm:text-2xl ${
               slideOut ? "animate__slideOutDownn" : "animate__slideInUpp"
             }`}
           >
@@ -89,19 +89,24 @@ const Home = () => {
           </p>
           <button
             style={{ animationDuration: "1.2s" }}
-            className={`overflow-hidden h-auto w-auto text-4xl max-sm:text-xl font-semibold rounded-lg shadow-lg p-6 bg-amber-100 -bottom-20 text-center text-slate-900 relative z-10 animate__animated ${
+            className={`animate__animated relative -bottom-20 z-10 h-auto w-auto overflow-hidden rounded-lg bg-amber-100 p-6 text-center text-4xl font-semibold text-slate-900 shadow-lg max-sm:text-xl ${
               fadeOut ? "animate__fadeInDownBigg" : "animate__fadeOutUpBigg"
             }`}
           >
             Tell me a joke
           </button>
-          <h1 className="absolute z-30 top-[250vh] text-[5rem] max-sm:text-xl m-3 font-extrabold text-slate-100">
+          <h1 className="absolute top-[250vh] z-30 m-3 text-[5rem] font-extrabold text-slate-100 max-sm:text-xl">
             <span>Joke</span>
-            <span className="animate-pulse inline-block">|</span>
+            <span
+              style={{ animationDuration: "1.5s" }}
+              className="animate__animated animate__flash animate__infinite inline-block"
+            >
+              |
+            </span>
           </h1>
         </div>
 
-        <div className="min-h-screen w-full gap-4 items-center justify-center flex flex-wrap max-sm:flex-col">
+        <div className="flex min-h-screen w-full flex-wrap items-center justify-center gap-4 max-sm:flex-col">
           <Card
             src="/hackaton1/1.jpg"
             name="Nightshade"

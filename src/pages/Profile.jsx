@@ -3,8 +3,8 @@ const Profile = () => {
   const favCard = JSON.parse(localStorage.getItem("favCard"));
   return (
     <main className="min-h-screen">
-      <div className="flex w-full h-screen flex-col items-center justify-center gap-20">
-        <h1 className="text-slate-50 hover:-translate-y-20 duration-700 relative z-20 text-center text-[8rem]">
+      <div className="flex h-screen w-full flex-col items-center justify-center gap-20">
+        <h1 className="relative z-20 text-center text-[8rem] text-slate-50 duration-700 hover:-translate-y-20">
           My Favorite
         </h1>
         <Card

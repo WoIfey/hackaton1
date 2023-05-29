@@ -18,9 +18,9 @@ const Card = ({ src, name, description, color }) => {
   };
 
   return (
-    <div className="flipped max-sm:w-full z-20 h-[55vh] w-[20%]">
+    <div className="flipped z-20 h-[55vh] w-[20%] max-sm:w-full">
       <div
-        className={`card bg-cover rounded-md shadow-lg w-full h-full text-center flex justify-between flex-col p-5 ${color} ${
+        className={`card flex h-full w-full flex-col justify-between rounded-md bg-cover p-5 text-center shadow-lg ${color} ${
           flipped ? "flipped" : ""
         }`}
         style={{
@@ -30,10 +30,10 @@ const Card = ({ src, name, description, color }) => {
       >
         {flipped && (
           <>
-            <p className="text-3xl text-amber-50 font-bold">{name}</p>
-            <p className="text-amber-50 font-bold">{description}</p>
+            <p className="text-3xl font-bold text-amber-50">{name}</p>
+            <p className="font-bold text-amber-50">{description}</p>
             <button
-              className="p-4 bg-amber-100 text-xl font-bold rounded shadow-lg"
+              className="rounded bg-amber-100 p-4 text-xl font-bold shadow-lg"
               onClick={favoriteClick}
             >
               Add favorite
