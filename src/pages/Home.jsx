@@ -1,23 +1,25 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Card from "../components/Cards";
+import Typewriter from "typewriter-effect";
 
 const Home = () => {
   const [fadeIn, setFadeIn] = useState(true);
   const [slideIn, setSlideIn] = useState(true);
   const [slideOut, setSlideOut] = useState(true);
   const [fadeOut, setfadeOut] = useState(true);
+  const [showJoke, setShowJoke] = useState(false);
+  const [joke, setJoke] = useState(null);
 
   useEffect(() => {
-    const h1Interval = setInterval(() => {
+    const funnyInterval = setInterval(() => {
       setFadeIn(false);
       setTimeout(() => setFadeIn(true), 2000);
     }, 4500);
 
     return () => {
-      clearInterval(h1Interval);
+      clearInterval(funnyInterval);
     };
   }, []);
-
   useEffect(() => {
     const twistedInterval = setInterval(() => {
       setSlideIn(false);
@@ -48,6 +50,25 @@ const Home = () => {
       clearInterval(jokeInterval);
     };
   }, []);
+
+  const fetchJoke = () => {
+    fetch("https://official-joke-api.appspot.com/jokes/random")
+      .then((response) => response.json())
+      .then((data) => setJoke(data));
+  };
+
+  const clickJoke = () => {
+    if (!joke) {
+      fetchJoke();
+    }
+    setShowJoke(!showJoke);
+    scrollToBottom();
+  };
+
+  const scrollToBottom = () => {
+    const bottomElement = document.getElementById("bottom");
+    bottomElement.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <main className="min-h-screen">
@@ -92,18 +113,24 @@ const Home = () => {
             className={`animate__animated relative -bottom-20 z-10 h-auto w-auto overflow-hidden rounded-lg bg-amber-100 p-6 text-center text-4xl font-semibold text-slate-900 shadow-lg max-sm:text-xl ${
               fadeOut ? "animate__fadeInDownBigg" : "animate__fadeOutUpBigg"
             }`}
+            onClick={clickJoke}
           >
             Tell me a joke
           </button>
-          <h1 className="absolute top-[250vh] z-30 m-3 text-[5rem] font-extrabold text-slate-100 max-sm:text-xl">
-            <span>Joke</span>
-            <span
-              style={{ animationDuration: "1.5s" }}
-              className="animate__animated animate__flash animate__infinite inline-block"
-            >
-              |
-            </span>
-          </h1>
+          <div className="absolute top-[250vh] z-30 m-3 text-[5rem] font-extrabold text-slate-100 max-sm:text-xl">
+            {showJoke && joke && (
+              <span>
+                <Typewriter
+                  options={{
+                    strings: [joke.setup, joke.punchline],
+                    autoStart: true,
+                    loop: true,
+                    delay: 80,
+                  }}
+                />
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="flex min-h-screen w-full flex-wrap items-center justify-center gap-4 max-sm:flex-col">
@@ -217,7 +244,7 @@ const Home = () => {
           />
         </div>
       </main>
-      <div className="min-h-screen"></div>
+      <div id="bottom" className="min-h-screen"></div>
     </>
   );
 };
